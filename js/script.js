@@ -12,11 +12,23 @@ document.getElementById("showdate").className= "styldate";
 
 var check=true;
 
+var timer = 0;
+var i = setInterval(function(){
+    // Timmer increment
+
+    timer++;
+       document.getElementById("timing").innerHTML="timer" + timer ;
+       document.getElementById("timing").className="timing";
+    
+}, 1000);
+
+
+
 
 var result = "";
 
 for(var i=0; i<cardarry.length; i=i+1){
-
+          
 	var liresult = '<div id='+i+' class="click panel circle" onClick="cardClick('+i+')"><div class="front"><img src="images/card.png" width="190" height="300" alt=""></div><div class="back"><h2>'+cardarry[i]+'</h2> </div></div>'
 
 	result = liresult+result;
